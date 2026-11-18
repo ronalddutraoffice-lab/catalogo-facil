@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#173d32"><meta name="description" content="Biblioteca pesquisável de catálogos e produtos.">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+<title>Catálogo Fácil</title>
+</head>
+<body>
+<header class="topbar"><div class="brandmark">CF</div><div><strong>CATÁLOGO FÁCIL</strong><small>Sua biblioteca de produtos</small></div><button id="installBtn" class="icon-btn" hidden aria-label="Instalar aplicativo">＋</button></header>
+<main>
+<section class="hero"><p class="eyebrow">CONSULTA RÁPIDA</p><h1>Encontre o produto<br>que você procura.</h1><p>Pesquise em todos os catálogos, filtre por marca e consulte a página de origem.</p>
+<div class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Produto, código ou descrição..." autocomplete="off"><button id="clearSearch" aria-label="Limpar pesquisa">×</button></div>
+<div class="stats"><div><b id="catalogCount">9</b><span>catálogos</span></div><div><b id="pageCount">—</b><span>páginas indexadas</span></div><div><b>R$ —</b><span>sem preços</span></div></div></section>
+<section class="filters"><label>Marca<select id="brandFilter"><option value="">Todas as marcas</option></select></label><label>Categoria<select id="categoryFilter"><option value="">Todas as categorias</option></select></label><label>Ordenar<select id="sortFilter"><option value="relevance">Mais relevantes</option><option value="alpha">A–Z</option><option value="brand">Marca</option></select></label></section>
+<section class="results-head"><div><h2 id="resultsTitle">Catálogos disponíveis</h2><p id="resultsMeta">Pesquise para localizar produtos nas páginas dos PDFs.</p></div><button id="showCatalogs" class="text-btn">Ver catálogos</button></section>
+<div id="results" class="results"></div>
+<section class="upload-panel"><div class="upload-icon">＋</div><div class="upload-copy"><h3>Adicionar os PDFs originais</h3><p>Guarde os arquivos no navegador deste celular para abrir cada catálogo por aqui.</p><small>Os PDFs ficam neste aparelho; não são enviados automaticamente para a internet.</small></div><label class="upload-btn">Adicionar PDF<input id="pdfUpload" type="file" accept="application/pdf" multiple hidden></label></section>
+<section class="notice"><b>Importante sobre a busca</b><p>Os resultados usam o texto que foi possível extrair dos PDFs. Catálogos digitalizados como imagem precisam passar por OCR para que todos os produtos possam ser pesquisados pelo nome.</p></section>
+</main>
+<nav class="bottom-nav"><a class="active" href="#top">⌂<span>Início</span></a><a href="#results">⌕<span>Pesquisar</span></a><a href="#catalog-list">▤<span>Catálogos</span></a><a href="#upload">＋<span>Adicionar</span></a></nav>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body></html>
